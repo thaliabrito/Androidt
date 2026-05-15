@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
 /* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
-    font-family: 'bebas';
-    src: url('font/BebasNeueRegular.otf') format('Opentype');
+    font-family: 'droid';
+    src: url('../font/IDroid/IDroid.otf') format('opentype');
 }
-@font-face {
-    font-family:'idro' ;
-    src: url('font/idroid.otf')format('opentype');
+
+:root{
+    --font-family:Arial, Helvetica, sans-serif;
+    --font-bebas:'Bebas Neue', sans-serif;
+    --font-idro:'droid', sans-serif;
 }
  
 /*@font-face {
@@ -39,12 +42,11 @@ header {
     padding: 55px;
     box-shadow: 1px 5px 4px rgba(0, 0, 0, 0.566);
 }
-
-header h1 {
-    font-family: 'bebas';
+h1 {
+    font-family:var(--font-bebas);
     text-align: center;
     font-size: 48px;
-    font-weight: lighter;
+    font-weight: bold;
    
 }
 
@@ -116,7 +118,7 @@ section:last-of-type {
 
 /* TÍTULO PRINCIPAL */
 #principal {
-    font-family: 'idro';
+    font-family:var(--font-idro);
     color: #074a24;
     font-size: 28px;
     text-align: left;
@@ -124,11 +126,11 @@ section:last-of-type {
 }
 
 /* SUBTÍTULOS */
-.h2 {
-    font-family: 'idro ';
-    font-weight: lighter;
-    color: #0a6130fb;
-    background-image: linear-gradient(to right, rgba(20, 223, 155, 0.427), white);
+h2.secundario {
+    font-family: var(--font-idro);
+    font-weight: bold;
+    color: #0a6130;
+    background-image: linear-gradient(to right, rgba(0, 255, 187, 0.412), rgba(255, 255, 255, 0.428));
     font-size: 22px;
     padding: 5px;
     margin: 15px 0;
@@ -172,6 +174,9 @@ section:last-of-type {
 div.video{
     background-color: #073c1e;
     padding: 0px 0px 20px 0px;   
+    border-radius:20px;
+    box-shadow:3px 6px 10px rgba(0, 0, 0, 0.754) ,
+    -3px 6px 10px rgba(0, 0, 0, 0.754);
     
 }
 
@@ -191,23 +196,37 @@ picture img {
 .video {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
 }
 
 .video iframe {
-    max-width: 100%;
+    max-width: 85vw;
+    max-height:80vh;
+    min-height:50vh;
     border-radius: 10px;
+    margin:20px 0px -10px 0px;
+
 }
 
 /* ASIDE */
 aside {
     background-color: #83e1ade6;
     padding: 15px;
-    border-radius: 10px;
+    border-radius:  0px 0px 10px 10px;
     margin-top: 10px;
-   
+    margin-bottom:30px;
+   box-shadow:3px 6px 10px rgba(0, 0, 0, 0.754), -3px 6px 10px rgba(0, 0, 0, 0.754);
 }
-
+h3{
+   font-family:var(--font-bebas);
+   color: white;
+   background-color:#074a24;
+   font-weight:lighter;
+   padding:10px;
+   margin-bottom:-12px;
+   border-radius:5px;
+   box-shadow:3px 0px 10px rgba(0, 0, 0, 0.754) ,
+   -3px 6px 10px rgba(0, 0, 0, 0.754);
+}
 /* LISTA */
 ul {
     list-style-type: '✔  ';
